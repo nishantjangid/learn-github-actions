@@ -28,8 +28,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
-        run: npm ci
+      run: npm ci
     - name: run build if present
-        run: npm run build --if-present
+      run: npm run build --if-present
     - name: run pm2 server
-        run: pm2 restart app.js
+      run: pm2 restart app.js
